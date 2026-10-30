@@ -1,0 +1,433 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dinesh Jadhav</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a full-bleed blue poster block for the name, then plain white space where the
+   work is shown as things you can touch (a permissions sketch, a draggable board),
+   and an ink-colored footer for contact. Blue is the only loud color. */
+:root {
+  --bg: #F4F5FA;
+  --surface: #FFFFFF;
+  --fg: #10121E;
+  --muted: #5A5F78;
+  --line: #D9DCEA;
+  --accent: #2A3CEB;
+  --accent-ink: #FFFFFF;
+  --hero: #2A3CEB;
+  --hero-ink: #FFFFFF;
+  --hero-muted: #C9CFFF;
+  --foot: #10121E;
+  --foot-ink: #F4F5FA;
+  --foot-muted: #9EA3BD;
+
+  --display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Hanken Grotesk", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0D17;
+    --surface: #141829;
+    --fg: #ECEEF8;
+    --muted: #979CB6;
+    --line: #252A42;
+    --accent: #97A3FF;
+    --accent-ink: #0B0D17;
+    --foot: #141829;
+    --foot-ink: #ECEEF8;
+    --foot-muted: #979CB6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0D17;
+  --surface: #141829;
+  --fg: #ECEEF8;
+  --muted: #979CB6;
+  --line: #252A42;
+  --accent: #97A3FF;
+  --accent-ink: #0B0D17;
+  --foot: #141829;
+  --foot-ink: #ECEEF8;
+  --foot-muted: #979CB6;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, p, ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.inner {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.band-title {
+  font-family: var(--display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+}
+
+/* ---------- Poster hero ---------- */
+.hero { background: var(--hero); color: var(--hero-ink); }
+.hero .inner { padding-block: clamp(32px, 6vw, 64px) clamp(36px, 6vw, 72px); }
+.hero-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; font-weight: 600; color: var(--hero-muted); }
+.name {
+  font-family: var(--display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(5rem, 24vw, 16rem);
+  line-height: 0.8;
+  letter-spacing: -0.005em;
+  margin-top: clamp(24px, 5vw, 56px);
+}
+.name span { display: block; }
+.name span + span { padding-left: clamp(0.5rem, 9vw, 7rem); }
+.hero-body { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px 48px; margin-top: clamp(28px, 5vw, 56px); align-items: end; }
+.hero-body p { font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.45; max-width: 36em; }
+.hero-body p + p { margin-top: 14px; color: var(--hero-muted); font-size: 1.0625rem; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.btn {
+  display: inline-flex; align-items: center; padding: 12px 20px;
+  border: 2px solid currentColor; border-radius: 999px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.hero .btn { color: var(--hero-ink); }
+.hero .btn:hover { background: var(--hero-ink); color: var(--hero); border-color: var(--hero-ink); }
+.hero .btn.solid { background: var(--hero-ink); color: var(--hero); border-color: var(--hero-ink); }
+.hero .btn.solid:hover { background: transparent; color: var(--hero-ink); }
+.hero :focus-visible { outline-color: var(--hero-ink); }
+
+/* ---------- Work ---------- */
+.work { padding-block: clamp(48px, 8vw, 96px); }
+.project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 32px clamp(28px, 5vw, 72px); align-items: center; margin-top: clamp(36px, 6vw, 72px); }
+.project.flip .copy { order: 2; }
+.copy { min-width: 0; }
+.project h3 {
+  font-family: var(--display); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 0.9;
+}
+.meta { margin-top: 10px; color: var(--accent); font-weight: 700; }
+.copy p { margin-top: 16px; max-width: 34em; }
+.copy p.built { color: var(--muted); font-size: 0.9375rem; }
+.copy .btn { margin-top: 22px; color: var(--fg); }
+.copy .btn:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+.demo { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: clamp(14px, 3vw, 22px); }
+.demo-cap { margin-top: 12px; font-size: 0.8125rem; color: var(--muted); }
+.demo-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 0.875rem; color: var(--muted); }
+.demo-head b { color: var(--fg); font-weight: 700; }
+
+.perm { margin-top: 12px; }
+.perm li { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; border-top: 1px solid var(--line); font-weight: 600; }
+.sw {
+  position: relative; flex: none; width: 46px; height: 26px; padding: 0;
+  border: 0; border-radius: 999px; background: var(--line); cursor: pointer;
+  transition: background 0.18s;
+}
+.sw::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px;
+  border-radius: 50%; background: var(--surface); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.18s;
+}
+.sw[aria-checked="true"] { background: var(--accent); }
+.sw[aria-checked="true"]::after { transform: translateX(20px); }
+.audit { margin-top: 6px; border-top: 1px solid var(--line); padding-top: 14px; }
+.audit h4 { font-size: 0.875rem; font-weight: 700; color: var(--muted); }
+.audit ol { margin-top: 8px; display: grid; gap: 8px; min-height: 5.6em; align-content: start; }
+.audit li { font-size: 0.9375rem; display: flex; gap: 10px; }
+.audit li time { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; flex: none; }
+.audit li.empty { color: var(--muted); }
+
+.board { position: relative; height: 300px; overflow: hidden; border-radius: 8px; background: var(--bg); border: 1px dashed var(--line); touch-action: pan-y; }
+.card {
+  position: absolute; left: 0; top: 0; width: 138px; padding: 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  box-shadow: 0 2px 0 var(--line); cursor: grab; touch-action: none; user-select: none;
+}
+.card.drag { cursor: grabbing; box-shadow: 0 10px 24px rgba(16, 18, 30, 0.22); }
+.card .tag { display: inline-block; font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.04em; padding: 2px 7px; border-radius: 4px; background: var(--accent); color: var(--accent-ink); }
+.card b { display: block; margin-top: 8px; font-size: 0.9375rem; line-height: 1.2; }
+.card small { display: block; margin-top: 2px; font-size: 0.75rem; color: var(--muted); }
+
+/* ---------- Experience, tools, school ---------- */
+.plain { padding-block: clamp(40px, 7vw, 80px); border-top: 1px solid var(--line); }
+.plain .grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr); gap: 20px clamp(28px, 5vw, 72px); }
+.plain .band-title { font-size: clamp(2rem, 5vw, 3rem); }
+.job h3 { font-size: 1.375rem; font-weight: 700; line-height: 1.25; }
+.job .meta { margin-top: 4px; }
+.job p { margin-top: 12px; max-width: 38em; }
+.tools { display: grid; }
+.tools div { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 2px 24px; padding-block: 14px; border-top: 1px solid var(--line); }
+.tools div:first-child { border-top: 0; padding-top: 0; }
+.tools dt { color: var(--muted); font-weight: 600; }
+.tools dd { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
+.tools-note { margin-top: 18px; color: var(--muted); }
+.school { display: grid; gap: 20px; }
+.school li { display: grid; grid-template-columns: minmax(0, 8rem) minmax(0, 1fr); gap: 2px 24px; }
+.school .yr { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.school b { display: block; font-size: 1.125rem; line-height: 1.3; }
+.school span.sub { color: var(--muted); }
+
+/* ---------- Contact ---------- */
+.contact { background: var(--foot); color: var(--foot-ink); padding-block: clamp(48px, 8vw, 96px) 28px; }
+.contact .band-title { color: var(--foot-ink); font-size: clamp(3rem, 11vw, 8rem); line-height: 0.85; }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: clamp(24px, 4vw, 40px); }
+.mail .addr { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 5.4vw, 3rem); line-height: 1; overflow-wrap: anywhere; }
+.copy-btn { font: inherit; font-weight: 700; font-size: 0.9375rem; padding: 8px 16px; border-radius: 999px; border: 2px solid var(--foot-ink); background: transparent; color: var(--foot-ink); cursor: pointer; }
+.copy-btn:hover { background: var(--foot-ink); color: var(--foot); }
+.contact :focus-visible { outline-color: var(--foot-ink); }
+.also { display: flex; flex-wrap: wrap; gap: 8px 32px; margin-top: 28px; color: var(--foot-muted); font-weight: 500; }
+.also a { color: var(--foot-ink); text-underline-offset: 4px; }
+.also .tel { color: var(--foot-ink); }
+.legal { margin-top: clamp(40px, 7vw, 80px); padding-top: 16px; border-top: 1px solid var(--foot-muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; font-size: 0.875rem; color: var(--foot-muted); }
+
+/* ---------- Narrow ---------- */
+@media (max-width: 820px) {
+  .hero-body, .project, .plain .grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-links { justify-content: flex-start; }
+  .project.flip .copy { order: 0; }
+}
+@media (max-width: 560px) {
+  .tools div, .school li { grid-template-columns: minmax(0, 1fr); }
+  .card { width: 122px; padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .sw, .sw::after, .btn { transition: none; }
+}
+</style>
+
+<header class="hero">
+  <div class="inner">
+    <div class="hero-top"><span>Full-stack developer</span><span>Mumbai, India</span></div>
+    <h1 class="name"><span>Dinesh</span><span>Jadhav</span></h1>
+    <div class="hero-body">
+      <div>
+        <p>I'm a final-year B.Tech student in AI and Data Science. I build web apps from end to end: the React front end, the Node and Express API, the database, and the screens in Figma before any of that.</p>
+        <p>Right now I'm working on HealthChain, a medical records platform where patients decide who sees their data.</p>
+      </div>
+      <div class="hero-links">
+        <a class="btn solid" href="https://github.com/jadhavdineshdev" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/dinesh-jadhav-8a4273309/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="#contact">Email me</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="work" id="work">
+    <div class="inner">
+      <h2 class="band-title">Things I've built</h2>
+
+      <article class="project">
+        <div class="copy">
+          <h3>HealthChain</h3>
+          <p class="meta">Feb 2026 to now · Full-stack developer</p>
+          <p>A healthcare records platform with separate portals for patients, doctors and administrators. Patients decide who can open their records. Doctors have to pass a license check first, and anyone can sign in with Google.</p>
+          <p>Access is role-based. Medical data stays off-chain, and audit proofs are written to Hyperledger Fabric and checked with SHA-256, so tampering shows up.</p>
+          <p class="built">Built with React, Node.js, Express, Hyperledger Fabric, Docker and Tailwind CSS.</p>
+        </div>
+
+        <div>
+          <div class="demo">
+            <div class="demo-head"><b>Patient portal</b><span>Who can open my records</span></div>
+            <ul class="perm">
+              <li><span>Family doctor</span><button class="sw" type="button" role="switch" aria-checked="true" aria-label="Family doctor access" data-who="Family doctor"></button></li>
+              <li><span>Cardiologist</span><button class="sw" type="button" role="switch" aria-checked="true" aria-label="Cardiologist access" data-who="Cardiologist"></button></li>
+              <li><span>Radiology lab</span><button class="sw" type="button" role="switch" aria-checked="false" aria-label="Radiology lab access" data-who="Radiology lab"></button></li>
+            </ul>
+            <div class="audit">
+              <h4>Audit trail</h4>
+              <ol id="audit"><li class="empty">Flip a switch to add an entry.</li></ol>
+            </div>
+          </div>
+          <p class="demo-cap">A small sketch of the permission idea. It uses no real data.</p>
+        </div>
+      </article>
+
+      <article class="project flip">
+        <div class="copy">
+          <h3>DocsBoard</h3>
+          <p class="meta">Jun 2026 to Aug 2026 · Front end and UI/UX design</p>
+          <p>A board for your documents where every document is a card you can drag anywhere. You can create, upload, download and delete documents in 4 file formats, up to 2 MB each. Everything is saved in your browser with localStorage.</p>
+          <p>I designed it and built the front end, with responsive layouts, a dark mode and motion-based interactions.</p>
+          <p class="built">Built with React.js, Vite, Tailwind CSS, Motion, JavaScript and GSAP.</p>
+          <a class="btn" href="https://docs-board.vercel.app/" target="_blank" rel="noopener">Open DocsBoard</a>
+        </div>
+
+        <div>
+          <div class="demo">
+            <div class="board" id="board" aria-label="Sample document board">
+              <div class="card" tabindex="0" data-x="0.06" data-y="0.1"><span class="tag">DOC</span><b>Project brief</b><small>184 KB</small></div>
+              <div class="card" tabindex="0" data-x="0.82" data-y="0.06"><span class="tag">PDF</span><b>Wireframes</b><small>1.2 MB</small></div>
+              <div class="card" tabindex="0" data-x="0.3" data-y="0.55"><span class="tag">TXT</span><b>Meeting notes</b><small>6 KB</small></div>
+              <div class="card" tabindex="0" data-x="0.88" data-y="0.78"><span class="tag">XLS</span><b>Budget</b><small>92 KB</small></div>
+            </div>
+          </div>
+          <p class="demo-cap">Drag the cards, or focus one and use the arrow keys. These are sample files.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="plain" id="experience">
+    <div class="inner grid">
+      <h2 class="band-title">Experience</h2>
+      <div class="job">
+        <h3>Frontend Web Developer Intern, Prodigy InfoTech</h3>
+        <p class="meta">Aug 2024 to Sep 2024 · Remote</p>
+        <p>I finished two frontend projects: a responsive landing page and a weather app that shows live conditions from a weather API. Both work on desktop and mobile.</p>
+        <p>Tools: JavaScript, REST APIs, GSAP, React and Tailwind CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plain" id="tools">
+    <div class="inner grid">
+      <h2 class="band-title">What I use</h2>
+      <div>
+        <dl class="tools">
+          <div><dt>Languages</dt><dd>JavaScript, Java, HTML5, CSS3</dd></div>
+          <div><dt>Frameworks</dt><dd>React, Node.js, Express, GSAP, Three.js</dd></div>
+          <div><dt>Databases</dt><dd>PostgreSQL, MongoDB</dd></div>
+          <div><dt>Tools</dt><dd>Git, GitHub, Postman, Docker, Google OAuth</dd></div>
+          <div><dt>Design</dt><dd>Figma, UI design, wireframing, design systems</dd></div>
+        </dl>
+        <p class="tools-note">I also bring communication, leadership and problem solving to a team. I speak English, Hindi and Marathi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plain" id="school">
+    <div class="inner grid">
+      <h2 class="band-title">School</h2>
+      <ul class="school">
+        <li><span class="yr">2023 to 2027</span><div><b>B.Tech, Artificial Intelligence and Data Science</b><span class="sub">Yashoda Technical Campus, Satara · CGPA 7.25</span></div></li>
+        <li><span class="yr">2021 to 2023</span><div><b>HSC, Science with Information Technology</b><span class="sub">Thakur Vidya Mandir High School and Junior College, Kandivali, Mumbai · 57.00%</span></div></li>
+        <li><span class="yr">2021</span><div><b>Secondary School Certificate</b><span class="sub">Adv. Chandansingh Solanki School, Mumbai · 77.40%</span></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="inner">
+    <h2 class="band-title">Let's talk</h2>
+    <div class="mail">
+      <span class="addr" id="addr">dineshjadhavdev@gmail.com</span>
+      <button class="copy-btn" type="button" id="copy-mail">Copy email</button>
+    </div>
+    <p class="also">
+      <span>Phone <span class="tel" id="tel">8010857355</span></span>
+      <a href="https://github.com/jadhavdineshdev" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/dinesh-jadhav-8a4273309/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <div class="legal"><span>© 2026 Dinesh Jadhav</span><span>Mumbai, India</span></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* Copy email */
+  var btn = document.getElementById('copy-mail');
+  var addr = document.getElementById('addr');
+  function selectText(el) {
+    try {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    } catch (e) {}
+  }
+  btn.addEventListener('click', function () {
+    var flash = function (t) { btn.textContent = t; setTimeout(function () { btn.textContent = 'Copy email'; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr.textContent.trim()).then(function () { flash('Copied'); }, function () { selectText(addr); flash('Selected'); });
+    } else { selectText(addr); flash('Selected'); }
+  });
+
+  /* Permission switches and audit trail */
+  var audit = document.getElementById('audit');
+  document.querySelectorAll('.sw').forEach(function (sw) {
+    sw.addEventListener('click', function () {
+      var on = sw.getAttribute('aria-checked') !== 'true';
+      sw.setAttribute('aria-checked', on ? 'true' : 'false');
+      var empty = audit.querySelector('.empty');
+      if (empty) empty.remove();
+      var li = document.createElement('li');
+      var t = document.createElement('time');
+      t.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      var s = document.createElement('span');
+      s.textContent = (on ? 'Access granted to ' : 'Access removed for ') + sw.getAttribute('data-who') + '. Proof recorded.';
+      li.appendChild(t); li.appendChild(s);
+      audit.insertBefore(li, audit.firstChild);
+      while (audit.children.length > 3) audit.removeChild(audit.lastChild);
+    });
+  });
+
+  /* Draggable cards */
+  var board = document.getElementById('board');
+  var cards = Array.prototype.slice.call(board.querySelectorAll('.card'));
+  var z = 1;
+  function place(c) {
+    var bw = board.clientWidth - c.offsetWidth, bh = board.clientHeight - c.offsetHeight;
+    c.style.left = Math.max(0, Math.min(1, c._fx)) * bw + 'px';
+    c.style.top = Math.max(0, Math.min(1, c._fy)) * bh + 'px';
+  }
+  cards.forEach(function (c, i) {
+    c._fx = parseFloat(c.getAttribute('data-x')); c._fy = parseFloat(c.getAttribute('data-y'));
+    c.style.zIndex = i + 1; z = Math.max(z, i + 1);
+    var dx = 0, dy = 0;
+    c.addEventListener('pointerdown', function (e) {
+      c.setPointerCapture(e.pointerId); c.classList.add('drag'); c.style.zIndex = ++z;
+      var r = c.getBoundingClientRect(); dx = e.clientX - r.left; dy = e.clientY - r.top;
+    });
+    c.addEventListener('pointermove', function (e) {
+      if (!c.classList.contains('drag')) return;
+      var br = board.getBoundingClientRect();
+      var bw = board.clientWidth - c.offsetWidth, bh = board.clientHeight - c.offsetHeight;
+      var x = Math.max(0, Math.min(bw, e.clientX - br.left - dx));
+      var y = Math.max(0, Math.min(bh, e.clientY - br.top - dy));
+      c._fx = bw ? x / bw : 0; c._fy = bh ? y / bh : 0;
+      c.style.left = x + 'px'; c.style.top = y + 'px';
+    });
+    function end() { c.classList.remove('drag'); }
+    c.addEventListener('pointerup', end); c.addEventListener('pointercancel', end);
+    c.addEventListener('keydown', function (e) {
+      var step = 14, m = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[e.key];
+      if (!m) return;
+      e.preventDefault();
+      var bw = board.clientWidth - c.offsetWidth, bh = board.clientHeight - c.offsetHeight;
+      var x = (c._fx * bw) + m[0] * step, y = (c._fy * bh) + m[1] * step;
+      c._fx = bw ? Math.max(0, Math.min(1, x / bw)) : 0; c._fy = bh ? Math.max(0, Math.min(1, y / bh)) : 0;
+      place(c); c.style.zIndex = ++z;
+    });
+  });
+  function layout() { cards.forEach(place); }
+  layout();
+  window.addEventListener('resize', layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+})();
+</script>
+
+</body></html>
